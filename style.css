@@ -1,0 +1,468 @@
+:root {
+  --purple: #728cd9;
+  --green: #bfb404;
+  --yellow: #daa404;
+}
+
+body {
+  background-color: #000 !important;
+  color: #fff !important;
+  font-family: "Spline Sans", sans-serif !important;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  /* opacity: 0.7; */
+  z-index: -10;
+  /* background: #000; */
+}
+
+#myImage {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  /* opacity: 0.7; */
+  z-index: -10;
+  background-image: url("http://dmi.aalto.fi/symposium22/assets/poster.png");
+  width: 100%;
+  height: 100%;
+  background-position: inherit;
+  background-repeat: round;
+  background-size: cover;
+}
+
+.bg_opacity {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 2.5em;
+}
+section {
+  padding-bottom: 120px;
+}
+a {
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.menu_anchor {
+  color: #fff !important;
+  font-weight: bold;
+  padding-left: 1em;
+  text-decoration: none;
+}
+a.menu_anchor:hover {
+  color: var(--yellow);
+}
+.landing {
+  /* height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical; */
+  height: 100vh;
+  display: table;
+  width: 100%;
+  table-layout: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.landing:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.landing_info {
+  /* max-width: 900px;
+  padding-left: 48px;
+  margin-top: 55px;
+  resize: vertical; */
+  max-width: 900px;
+  padding-left: 48px;
+  margin-top: 55px;
+  padding-top: 55px;
+  display: inline-block;
+  vertical-align: middle;
+}
+h1.title {
+  font-size: 5.5rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+h2.subsection {
+  font-weight: 700;
+}
+.logos_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_item {
+  /* display: inline-flex;
+  height: 120px; */
+}
+img.logo {
+  object-fit: contain;
+  width: 100%;
+}
+button#register_button {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  background-color: var(--yellow);
+  padding: 18px;
+  border-radius: 100%;
+  width: auto;
+  height: 85px;
+  transform: rotate(-25deg);
+  box-shadow: 2px 2px rgb(0 0 0 / 30%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.5em;
+  z-index: 1000;
+}
+button#register_button:hover {
+  background-color: var(--yellow);
+}
+
+.container-lg.left {
+  margin-left: 54px;
+}
+
+h2.subtitle {
+  font-weight: 400;
+  line-height: 1;
+  font-size: 2.5rem;
+}
+h6 {
+  font-weight: 400 !important;
+}
+h6.extra_info {
+  line-height: 0.5;
+  color: var(--yellow);
+  font-weight: 600 !important;
+  letter-spacing: 0.15px;
+}
+
+h6.extra_info2 {
+  line-height: 0.75;
+}
+.section_title {
+  width: fit-content;
+  position: relative;
+  margin-bottom: 32px;
+}
+img.border_bottom {
+  max-width: 100%;
+  position: absolute;
+  top: 74%;
+}
+.basic_info {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+img.picture {
+  width: 100%;
+  border-radius: 16px;
+}
+button.read_more {
+  border-radius: 100%;
+  background: rgb(255 255 255 / 30%);
+  color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+button.read_more:hover {
+  background-color: var(--purple);
+}
+#more,
+#more1,
+#more2,
+#more3,
+#more4,
+#more5,
+#more6,
+#more7,
+#more8,
+#more9,
+#more10,
+#more11,
+#more12,
+#more13,
+#more14,
+#more15 {
+  display: none;
+}
+h4.speaker_name {
+  font-weight: 800;
+  color: var(--purple);
+  padding-top: 1px;
+}
+
+h6.speaker_inst {
+  color: var(--green);
+  margin-top: -7px;
+}
+span#symposium {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--yellow);
+}
+
+span.time {
+  font-weight: 200;
+  /* padding-right: 10px; */
+  color: var(--yellow);
+}
+.schedule_item {
+  padding-top: 18px;
+}
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+.foot {
+  background-color: #000;
+  padding: 1em;
+}
+
+.speaker.col-md-6.col-12 {
+  padding: 2.5em 1em;
+}
+
+.anchor_points {
+  display: block;
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+span.cross {
+  text-decoration: line-through;
+}
+
+.embedded_video {
+  padding: 1em 0;
+}
+/* .schedule_item.row {
+  height: 500px;
+} */
+/* hide video player safari */
+
+/* This used to work for the parent element of button divs */
+/* But it does not work with newer browsers, the below doesn't hide the play button parent div */
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+@media only screen and (max-width: 1250.9px) {
+  h1.title {
+    font-size: 4.5rem;
+  }
+  h2.subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1047.9px) {
+  .landing_info {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 991.9px) {
+  .container-lg {
+    padding: 32px;
+  }
+  .container-lg.left {
+    margin-left: 0;
+  }
+  #myVideo {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 922.9px) {
+  h1.title {
+    font-size: 3.8rem;
+  }
+  h2.subtitle {
+    font-size: 1.7rem;
+  }
+
+  button#register_button {
+    padding: 12px;
+    height: 70px;
+    font-size: 1em;
+    bottom: 5%;
+    right: 5%;
+  }
+}
+@media only screen and (max-width: 767.9px) {
+  span#symposium {
+    font-size: 1rem;
+  }
+  h5.info {
+    font-size: 1.1rem;
+  }
+  .landing_info {
+    padding-left: 18px;
+    padding-right: 18px;
+    bottom: 10%;
+  }
+  .landing_info {
+    width: 90%;
+  }
+
+  .speaker {
+    padding-top: 2em;
+  }
+  h4.speaker_name {
+    padding-top: 0;
+  }
+  .schedule_item.row {
+    height: auto;
+  }
+  .align_center {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #myVideo {
+    height: 100%;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 599.9px) {
+  h1.title {
+    font-size: 3.2rem;
+  }
+  h2.subtitle {
+    font-size: 1.45rem;
+  }
+  .landing_info {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575.9px) {
+}
+@media only screen and (max-width: 540px) {
+  .basic_info {
+    display: block;
+  }
+  .type_inline {
+    display: inline-block;
+  }
+  .type_block {
+    display: block;
+  }
+
+  .logos_info {
+    flex-wrap: wrap;
+  }
+  .logo_item {
+    margin: auto;
+    width: 50%;
+  }
+  .logo_item.margin_left {
+    margin-left: 10%;
+  }
+  h5.info {
+    font-size: 1em;
+  }
+  button#register_button {
+    bottom: 3%;
+  }
+  .landing_info {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 502.9px) {
+  h1.title {
+    font-size: 2.8rem;
+  }
+  h2.subtitle {
+    font-size: 1.27rem;
+  }
+}
+@media only screen and (max-width: 444.9px) {
+  h1.title {
+    font-size: 2.5rem;
+  }
+  h2.subtitle {
+    font-size: 1.13rem;
+  }
+  span#symposium {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+}
+@media only screen and (max-width: 359.9px) {
+  h1.title {
+    font-size: 2.2rem;
+  }
+  h2.subtitle {
+    font-size: 1rem;
+  }
+  span#symposium {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (max-width: 329.9px) {
+  a.menu_anchor {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 576px) {
+  a.menu_anchor.d-none.d-sm-block {
+    display: inline-block !important;
+  }
+}
